@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master Computer Networking from absolute scratch. Join our premium academy for beginners and prepare for your CCNA or IT career today.">
+    <title>Networking Fundamentals - Master Computer Networking from Scratch</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Linking our external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BACK TO TOP BUTTON -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-network-wired"></i> NetAcademy
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#why-learn" class="nav-link">Why Us</a></li>
+                <li><a href="#who-join" class="nav-link">Who Can Join</a></li>
+                <li><a href="#modules" class="nav-link">Modules</a></li>
+                <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+                <li><a href="#faqs" class="nav-link">FAQs</a></li>
+                <li><a href="#enroll" class="btn btn-secondary nav-cta-mobile" style="margin-top: 15px; width: 80%;">Enroll Now</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="#enroll" class="btn btn-secondary btn-ripple nav-cta-desktop">Enroll Now</a>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero" id="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content reveal">
+                    <div class="hero-badge">
+                        <i class="fas fa-signal"></i> Absolute Beginners Program
+                    </div>
+                    <h1>Learn Computer <br><span class="accent-gradient-text">Networking</span> from Scratch</h1>
+                    <p class="hero-description">
+                        No tech experience? No problem. This online blueprint starts at real-world absolute zero, walking you step-by-step into the essential systems that power the internet.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#enroll" class="btn btn-primary btn-ripple">
+                            Enroll Now <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                        </a>
+                        <a href="#modules" class="btn btn-secondary btn-ripple">
+                            View Course Modules
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual reveal">
+                    <div class="hero-svg-container">
+                        <!-- Custom Networking Isometric SVG -->
+                        <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;">
+                            <!-- Central Server Stack -->
+                            <rect x="180" y="200" width="140" height="40" rx="6" fill="#0066ff" fill-opacity="0.2" stroke="#00f2fe" stroke-width="2"/>
+                            <rect x="180" y="260" width="140" height="40" rx="6" fill="#0066ff" fill-opacity="0.2" stroke="#00f2fe" stroke-width="2"/>
+                            <rect x="180" y="320" width="140" height="40" rx="6" fill="#0066ff" fill-opacity="0.2" stroke="#0052cc" stroke-width="2"/>
+                            
+                            <!-- Glowing Lights on Servers -->
+                            <circle cx="210" cy="220" r="4" fill="#00f2fe"/>
+                            <circle cx="230" cy="220" r="4" fill="#00f2fe"/>
+                            <circle cx="210" cy="280" r="4" fill="#00f2fe"/>
+                            <circle cx="230" cy="280" r="4" fill="#00f2fe"/>
+                            <circle cx="210" cy="340" r="4" fill="#00f2fe"/>
+                            <circle cx="230" cy="340" r="4" fill="#00f2fe"/>
+
+                            <!-- Network Node Branches -->
+                            <path d="M180 280 L100 280 L100 150 L150 150" stroke="#0066ff" stroke-width="2" stroke-dasharray="4 4" />
+                            <path d="M320 280 L400 280 L400 150 L350 150" stroke="#0066ff" stroke-width="2" stroke-dasharray="4 4"/>
+                            
+                            <!-- Peripheral Connected Icons Base -->
+                            <rect x="120" y="110" width="80" height="80" rx="16" fill="#070b19" stroke="#00f2fe" stroke-width="1"/>
+                            <rect x="300" y="110" width="80" height="80" rx="16" fill="#070b19" stroke="#00f2fe" stroke-width="1"/>
+
+                            <!-- Floating Satellite Icons/Indicators -->
+                            <circle cx="160" cy="150" r="22" fill="#0066ff" fill-opacity="0.1" />
+                            <circle cx="340" cy="150" r="22" fill="#0066ff" fill-opacity="0.1" />
+
+                            <!-- Globe/Web symbol -->
+                            <path d="M160 140 A 10 10 0 1 0 160 160 A 10 10 0 1 0 160 140" stroke="#00f2fe" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M340 138 L340 162 M328 150 L352 150" stroke="#00f2fe" stroke-width="2" stroke-linecap="round"/>
+                            
+                            <!-- Connecting Rays / Data Packets -->
+                            <circle cx="100" cy="210" r="3" fill="#00f2fe">
+                                <animate attributeName="cy" values="150;280;150" dur="4s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="400" cy="210" r="3" fill="#00f2fe">
+                                <animate attributeName="cy" values="280;150;280" dur="4s" repeatCount="indefinite" />
+                            </circle>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS COUNTER BAR -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="accent-gradient-text count" data-target="15000">0</h3>
+                    <p>Enrolled Students</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="accent-gradient-text count" data-target="20">0</h3>
+                    <p>Course Modules</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="accent-gradient-text count" data-target="120">0</h3>
+                    <p>Lab Worksheets</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="accent-gradient-text count" data-target="49">0</h3>
+                    <p>Rating (4.9/5)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. WHY LEARN NETWORKING -->
+    <section class="section-padding" id="why-learn">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Why Learn Networking?</h2>
+                <p>Computer networks run the world. Understanding networking is a direct access path to core technologies powering today's digital systems.</p>
+            </div>
+            <div class="why-cards">
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Build an IT Foundation</h3>
+                    <p>Develop core skills that support careers in systems administration, programming, web development, and cloud design.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Prepare for CCNA</h3>
+                    <p>Build the theoretical knowledge and fundamental practice frameworks required for top industry credentials.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Demystify the Internet</h3>
+                    <p>Discover how modern traffic routes across systems, including deep dives on web systems and localized routing.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-wrench"></i></div>
+                    <h3>Troubleshooting Skills</h3>
+                    <p>Diagnose connectivity, performance, and IP conflicts systematically to maintain consistent network uptime.</p>
+                </div>
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Broad IT Career Pathways</h3>
+                    <p>Open specialized opportunities in network engineering, systems security operations, and cloud architecture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. WHO CAN JOIN -->
+    <section class="section-padding" id="who-join" style="background: rgba(13, 20, 47, 0.3);">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Who Can Join?</h2>
+                <p>We designed this blueprint with one main target: Complete Beginners. If you know how to power on a computer, you are eligible to start.</p>
+            </div>
+            <div class="who-grid">
+                <div class="who-card reveal">
+                    <div class="who-icon-wrapper"><i class="fas fa-user-slash"></i></div>
+                    <h3>Absolute Beginners</h3>
+                    <p>No technical background or coding experience required to begin learning.</p>
+                </div>
+                <div class="who-card reveal">
+                    <div class="who-icon-wrapper"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>College Students</h3>
+                    <p>Supplement academic courses with practical networking applications.</p>
+                </div>
+                <div class="who-card reveal">
+                    <div class="who-icon-wrapper"><i class="fas fa-seedling"></i></div>
+                    <h3>Freshers</h3>
+                    <p>Build hands-on expertise to qualify for introductory technical roles.</p>
+                </div>
+                <div class="who-card reveal">
+                    <div class="who-icon-wrapper"><i class="fas fa-headset"></i></div>
+                    <h3>IT Support Engineers</h3>
+                    <p>Level up your knowledge to work on complex routing and switching configurations.</p>
+                </div>
+                <div class="who-card reveal">
+                    <div class="who-icon-wrapper"><i class="fas fa-plus"></i></div>
+                    <h3>Tech Enthusiasts</h3>
+                    <p>Learn the inner mechanics of the protocols powering our connected world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. COURSE MODULES -->
+    <section class="section-padding" id="modules">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Course Modules</h2>
+                <p>Structured, intuitive learning. 20 crucial topics organized into 4 logical progressive phases.</p>
+            </div>
+            <div class="modules-grid">
+                <!-- Module Group 1 -->
+                <div class="module-group reveal">
+                    <div class="module-header">
+                        <span class="module-number">PHASE 01</span>
+                        <h3>Network Architecture</h3>
+                    </div>
+                    <div class="module-list">
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Introduction to Networking</h4>
+                                <p>Discover core terminology and fundamental connectivity setups.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>What is a Network?</h4>
+                                <p>Analyze connections from basic point-to-point topologies to the global web.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Types of Networks</h4>
+                                <p>Learn structural boundaries of LAN, WAN, MAN, and PAN systems.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Network Topologies</h4>
+                                <p>Examine physical layouts including star, mesh, and hybrid architectures.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Internet vs. Intranet</h4>
+                                <p>Identify key differences between public systems and secure internal directories.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module Group 2 -->
+                <div class="module-group reveal">
+                    <div class="module-header">
+                        <span class="module-number">PHASE 02</span>
+                        <h3>Physical Infrastructure</h3>
+                    </div>
+                    <div class="module-list">
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Network Devices</h4>
+                                <p>Examine routers, switches, access points, and modern firewall systems.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Ethernet Basics</h4>
+                                <p>Learn standard protocols for wired local network communications.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Cables and Connectors</h4>
+                                <p>Configure fiber optic lines, twisted-pair cables, and RJ45 adapters.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Wireless Networking Basics</h4>
+                                <p>Analyze modern Wi-Fi generations, radio frequencies, and antenna targets.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>MAC Address</h4>
+                                <p>Examine unique physical hardware markers and Layer 2 frame deliveries.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module Group 3 -->
+                <div class="module-group reveal">
+                    <div class="module-header">
+                        <span class="module-number">PHASE 03</span>
+                        <h3>Models &amp; Protocol Stacks</h3>
+                    </div>
+                    <div class="module-list">
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>OSI Model</h4>
+                                <p>Navigate abstract communication processes through the 7 standard layers.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>TCP/IP Model</h4>
+                                <p>Explore structural data packaging across Internet and Transport layers.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>IP Address Basics &amp; IPv4</h4>
+                                <p>Understand logical system addresses, subnets, and delivery methods.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Ports and Protocols</h4>
+                                <p>Direct network services cleanly via HTTP, HTTPS, SSH, FTP, and basic routing.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>DNS Basics</h4>
+                                <p>Map system domains to backend numeric addresses using root servers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module Group 4 -->
+                <div class="module-group reveal">
+                    <div class="module-header">
+                        <span class="module-number">PHASE 04</span>
+                        <h3>Network Services &amp; Defense</h3>
+                    </div>
+                    <div class="module-list">
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>DHCP Basics</h4>
+                                <p>Automate dynamic address leases across scalable enterprise clients.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>NAT Basics</h4>
+                                <p>Conserve address spaces by translating private IPs into clean public packets.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Network Security Basics</h4>
+                                <p>Harden layouts using port authorization, basic access lists, and VPN tunnels.</p>
+                            </div>
+                        </div>
+                        <div class="module-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Troubleshooting Basics</h4>
+                                <p>Diagnose connectivity concerns via utility tools including ping and traceroute.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. WHAT YOU'LL LEARN -->
+    <section class="section-padding" id="what-learn" style="background: rgba(13, 20, 47, 0.3);">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>What You'll Learn</h2>
+                <p>Equip yourself with practical, real-world engineering fundamentals designed to build career-ready skills.</p>
+            </div>
+            <div class="learn-grid">
+                <div class="learn-card reveal">
+                    <div class="learn-icon"><i class="fas fa-check"></i></div>
+                    <p>Explain networking terms, types of hardware, and the layers of active protocol models clearly.</p>
+                </div>
+                <div class="learn-card reveal">
+                    <div class="learn-icon"><i class="fas fa-check"></i></div>
+                    <p>Identify hardware devices like switches, routers, and firewalls inside complex networks.</p>
+                </div>
+                <div class="learn-card reveal">
+                    <div class="learn-icon"><i class="fas fa-check"></i></div>
+                    <p>Configure base IPv4 addresses, assign subnets, and configure DHCP client requests.</p>
+                </div>
+                <div class="learn-card reveal">
+                    <div class="learn-icon"><i class="fas fa-check"></i></div>
+                    <p>Analyze network communication using logical tools to inspect packets from source to target destination.</p>
+                </div>
+                <div class="learn-card reveal">
+                    <div class="learn-icon"><i class="fas fa-check"></i></div>
+                    <p>Configure secure port connections and protect hardware configurations from unauthorized access.</p>
+                </div>
+                <div class="learn-card reveal">
+                    <div class="learn-icon"><i class="fas fa-check"></i></div>
+                    <p>Equip yourself with the fundamental frameworks required to study for the Cisco CCNA certification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. COURSE FEATURES -->
+    <section class="section-padding" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Premium Academy Features</h2>
+                <p>Our online ecosystem provides the learning tools and administrative resources required to support your education.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <i class="fas fa-users feature-icon"></i>
+                    <h3>Beginner Friendly</h3>
+                    <p>Complex topics are explained using accessible analogies, straightforward concepts, and simple terminology.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <i class="fas fa-laptop-code feature-icon"></i>
+                    <h3>Practical Focus</h3>
+                    <p>Learn core theory, then practice with hands-on labs and real-world configurations.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <i class="fas fa-language feature-icon"></i>
+                    <h3>Simple Language</h3>
+                    <p>No unnecessary academic jargon. We explain configurations using plain, easy-to-understand terms.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <i class="fas fa-video feature-icon"></i>
+                    <h3>High-Definition Lessons</h3>
+                    <p>Access high-definition video walkthroughs explaining topologies and troubleshooting scenarios step-by-step.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <i class="fas fa-file-download feature-icon"></i>
+                    <h3>Downloadable Notes</h3>
+                    <p>Get structured configuration cheat sheets, commands, topologies, and quick study guides.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <i class="fas fa-infinity feature-icon"></i>
+                    <h3>Lifetime Access</h3>
+                    <p>Learn at your own pace with unlimited lifetime access to our updated digital material database.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <i class="fas fa-mobile-alt feature-icon"></i>
+                    <h3>Mobile Responsive</h3>
+                    <p>Study on the go. Our course player scales smoothly across phones, tablets, and desktops.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <i class="fas fa-award feature-icon"></i>
+                    <h3>Verified Certificate</h3>
+                    <p>Earn a verified digital certificate of completion to showcase your skills on your resume.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. LEARNING ROADMAP -->
+    <section class="section-padding" id="roadmap" style="background: rgba(13, 20, 47, 0.3);">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Learning Roadmap</h2>
+                <p>Your step-by-step progress framework from entry-level understanding to professional CCNA readiness.</p>
+            </div>
+            <div class="roadmap-container reveal">
+                <div class="roadmap-timeline">
+                    <div class="roadmap-progress" id="roadmapProgress"></div>
+                    
+                    <div class="roadmap-step active">
+                        <div class="roadmap-node">01</div>
+                        <h3>Beginner</h3>
+                        <p>Start with zero technical experience.</p>
+                    </div>
+
+                    <div class="roadmap-step active">
+                        <div class="roadmap-node">02</div>
+                        <h3>Network Basics</h3>
+                        <p>Master devices, hardware connections, and structural layouts.</p>
+                    </div>
+
+                    <div class="roadmap-step active">
+                        <div class="roadmap-node">03</div>
+                        <h3>IP Addressing</h3>
+                        <p>Learn routing subnets, addresses, and interface targets.</p>
+                    </div>
+
+                    <div class="roadmap-step">
+                        <div class="roadmap-node">04</div>
+                        <h3>Data Routing</h3>
+                        <p>Trace data packets across switches, routers, and gateway setups.</p>
+                    </div>
+
+                    <div class="roadmap-step">
+                        <div class="roadmap-node">05</div>
+                        <h3>Internet Prep</h3>
+                        <p>Configure secure wireless access points and address-conserving NAT setups.</p>
+                    </div>
+
+                    <div class="roadmap-step">
+                        <div class="roadmap-node">06</div>
+                        <h3>CCNA Ready</h3>
+                        <p>Unlock advanced materials and prepare for enterprise certifications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+    <section class="section-padding" id="faqs">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Frequently Asked Questions</h2>
+                <p>Answers to common questions about enrollment, syllabus details, and prerequisites.</p>
+            </div>
+            <div class="faq-max-width reveal">
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Is this course really for complete beginners?</h3>
+                        <div class="faq-icon-box"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes, absolutely. We designed the entire curriculum with zero prior technical assumptions in mind. Each lesson starts with fundamental concepts and uses everyday analogies before introducing technical terms.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Do I need any special hardware or systems to start?</h3>
+                        <div class="faq-icon-box"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            No. Any modern computer (Windows, macOS, or Linux) with an internet browser is enough to start. We will use free, open-source software like Cisco Packet Tracer for our interactive practice sessions.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Will this course help me prepare for the CCNA exam?</h3>
+                        <div class="faq-icon-box"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. This course builds the critical foundation of networking theory, routing, and switching. It is specifically structured to cover the entry-level concepts required for official CCNA exam prep courses.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>How long do I have access to the course material?</h3>
+                        <div class="faq-icon-box"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            You get unlimited lifetime access. There are no monthly subscriptions, recurring fees, or expiration dates. You can learn entirely at your own pace and revisit modules whenever you need a refresher.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-header">
+                        <h3>Are study guides and printable resources included?</h3>
+                        <div class="faq-icon-box"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Yes. Each module includes a downloadable PDF cheat sheet, configuration command guides, and practice lab tasks to help reinforce your hands-on learning.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. ENROLLMENT / CONTACT SECTION -->
+    <section class="section-padding" id="enroll" style="background: rgba(13, 20, 47, 0.4);">
+        <div class="container">
+            <div class="enrollment-grid">
+                <div class="enrollment-info reveal">
+                    <h2>Begin Your Networking Career Journey</h2>
+                    <p>Take the first step. Submit your details below to receive program brochures, schedules, and pricing updates. Our support engineers are ready to answer your questions.</p>
+                    <div class="enrollment-meta">
+                        <div class="meta-item">
+                            <div class="meta-icon"><i class="fas fa-clock"></i></div>
+                            <div class="meta-text">
+                                <h4>Course Duration</h4>
+                                <p>2 Weeks • 20 Hours • Live Online Training</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-icon"><i class="fas fa-indian-rupee-sign"></i></div>
+                            <div class="meta-text">
+                                <h4>Course Fee</h4>
+                                <p>₹2,499 per Student</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-icon"><i class="fas fa-users"></i></div>
+                            <div class="meta-text">
+                                <h4>Batch Requirement</h4>
+                                <p>Minimum 8 Students Required to Start a Batch</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-icon"><i class="fas fa-gift"></i></div>
+                            <div class="meta-text">
+                                <h4>Free Demo Class</h4>
+                                <p>Day 1 Demo Class is Absolutely Free</p>
+                            </div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-icon"><i class="fas fa-language"></i></div>
+                            <div class="meta-text">
+                                <h4>Language</h4>
+                                <p>Classes will be conducted in English. Queries and doubts can also be addressed in Hindi and Malayalam.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card reveal">
+                    <form id="inquiryForm" novalidate>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+                            <label class="form-label">Full Name</label>
+                            <span class="error-msg" id="nameError">Please enter your full name.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="emailAddress" placeholder="Email Address">
+                            <label class="form-label">Email Address</label>
+                            <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone Number">
+                            <label class="form-label">Phone Number</label>
+                            <span class="error-msg" id="phoneError">Please enter a valid 10+ digit phone number.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <select class="form-control" id="subject">
+                                <option value="" disabled selected>Select Query Subject</option>
+                                <option value="Course Duration">Course Duration</option>
+                                <option value="Course Fees">Course Fees</option>
+                                <option value="Batch Timing">Batch Timing</option>
+                                <option value="Demo Class">Book Demo Class</option>
+                                <option value="Other">Other Inquiry</option>
+                            </select>
+                            <label class="form-label">Query Subject</label>
+                            <span class="error-msg" id="subjectError">Please select a query subject.</span>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" placeholder="Type your message here..."></textarea>
+                            <label class="form-label">Message</label>
+                            <span class="error-msg" id="messageError">Please type your questions.</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-ripple" style="width: 100%;">
+                            Submit Inquiry <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS POPUP MODAL -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your inquiry has been received. Our support engineers will contact you soon to help finalize your enrollment.</p>
+            <button class="btn btn-primary btn-ripple" id="closeModal">Continue</button>
+        </div>
+    </div>
+
+    <!-- 10. FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-logo-area">
+                <a href="#" class="logo">
+                    <i class="fas fa-network-wired"></i> NetAcademy
+                </a>
+                <p>Helping students start their careers in computer networks, routing systems, and cybersecurity infrastructure.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon" aria-label="X (formerly Twitter)"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#why-learn">Why Us</a></li>
+                    <li><a href="#who-join">Who Can Join</a></li>
+                    <li><a href="#features">Course Features</a></li>
+                    <li><a href="#roadmap">Learning Roadmap</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Syllabus Phases</h4>
+                <ul class="footer-links">
+                    <li><a href="#modules">Architecture</a></li>
+                    <li><a href="#modules">Physical Layer</a></li>
+                    <li><a href="#modules">TCP/IP &amp; OSI</a></li>
+                    <li><a href="#modules">Security Basics</a></li>
+                    <li><a href="#modules">Troubleshooting</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-links" style="pointer-events: none;">
+                    <li><a href="#"><i class="fas fa-envelope" style="margin-right: 8px;"></i> support@netacademy.org</a></li>
+                    <li><a href="#"><i class="fas fa-phone-alt" style="margin-right: 8px;"></i> +1 (555) 019-2834</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Tech District, San Jose, CA</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 NetAcademy. All Rights Reserved. Designed with ❤️ for Future Network Engineers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Linking our external JavaScript code -->
+    <script src="app.js"></script>
+</body>
+</html>
